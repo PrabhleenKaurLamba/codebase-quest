@@ -9,6 +9,8 @@ const missionPrompt = (files: SourceFile[]) => `You are creating an evidence-gro
 Rules for each mission:
 - "prompt" must be a direct question that helps a new engineer understand architecture, code flow, responsibility boundaries, business logic, or how multiple files interact.
 - Favor questions about system structure, request flow, feature orchestration, module relationships, change impact, or debugging starting points.
+- When a question refers to a page, route, service, or component, it must explicitly point to the relevant code path or folder, and the answer choices should all reflect the role of that file in the architecture.
+- The question should name the file or folder the user should inspect, for example: "What is the main role of src/pages/RouteSummaryPage.tsx in the overall architecture, and why is that file important to the system flow?"
 - Do NOT ask trivia questions about syntax, component names, exact HTML tags, repo titles, or easy literal lookups like "What component wraps the children in RootLayout?"
 - Start the question with words like "What", "Where", "Which", "How", or "Why" and end it with a question mark.
 - The four option strings should be plausible but not obvious; each should represent realistic architectural interpretations rather than literal implementation details.
